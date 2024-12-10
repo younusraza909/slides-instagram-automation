@@ -5,8 +5,9 @@ const isProtectedRoute = createRouteMatcher([
   "/api/payment(.*)",
   "/callback(.*)",
 ]);
-export default clerkMiddleware();
-
+export default clerkMiddleware(async (auth, req) => {
+  if (isProtectedRoute(req)) await auth.protect();
+});
 export const config = {
   matcher: [
     // Skip Next.js internals and all static files, unless found in search params
