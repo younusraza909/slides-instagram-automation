@@ -1,4 +1,4 @@
-import Navbar from "@/components/global/navbar";
+import InfoBar from "@/components/global/infobar";
 import Sidebar from "@/components/global/sidebar";
 import React from "react";
 
@@ -22,7 +22,7 @@ const Layout = ({ children, params }: Props) => {
       overflow-auto
       "
       >
-        <Navbar slug={params.slug} />
+        <InfoBar slug={params.slug} />
       </div>
     </div>
   );
