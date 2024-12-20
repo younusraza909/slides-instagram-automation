@@ -23,6 +23,7 @@ const Layout = ({ children, params }: Props) => {
       "
       >
         <InfoBar slug={params.slug} />
+        {children}
       </div>
     </div>
   );
